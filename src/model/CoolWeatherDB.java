@@ -117,7 +117,7 @@ public class CoolWeatherDB {
 	/*
 	 * 从数据库读取某城市的县信息
 	 */
-	public List<Country> loadCounties(int cityId){
+	public List<Country> loadCountries(int cityId){
 		List<Country> list = new ArrayList<Country>();
 		Cursor cursor = db.query("Country", null,"city_id=?", new String[]{String.valueOf(cityId)}, null, null, null);
 		if(cursor.moveToFirst()){
